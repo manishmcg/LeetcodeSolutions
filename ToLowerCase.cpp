@@ -1,7 +1,19 @@
-//https://leetcode.com/explore/challenge/card/may-leetcoding-challenge-2021/601/week-4-may-22nd-may-28th/3754/
-
 class Solution {
+private:
+    char toLowerCase(char ch)  {
+        if(ch >= 'A' && ch <= 'Z')
+            ch += 'a' - 'A' ;
+        return ch;
+    }
 public:
+    string toLowerCase(string s) {
+        for(auto &ch : s) {
+            ch = toLowerCase(ch);
+        }
+        return s;
+    }
+    
+    /*
     string toLowerCase(string s) {
         string ret_s = "";
         int len = s.length();
@@ -12,5 +24,5 @@ public:
             i++;
         }
         return ret_s;
-    }
+    }*/
 };
